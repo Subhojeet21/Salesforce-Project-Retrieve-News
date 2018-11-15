@@ -12,10 +12,6 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>Endpoint__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
         <members>bbc</members>
         <name>RemoteSiteSetting</name>
     </types>
