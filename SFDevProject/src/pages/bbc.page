@@ -1,13 +1,26 @@
 <apex:page controller="bbc" showHeader="false" sidebar="false" action="{!getMostReadNews}">
+    <style type="text/css">
+        
+        body .pbBody table.list tr td.indexColumnClass  {
+            color: #de0e0e; !important;
+            font-size: 2.75rem !important;
+        }
+    
+        body .pbBody table.list tr td.linkColumnClass  {
+            color: #de0e0e; !important;
+            font-size: 1rem !important;
+        }
+    
+    </style>
     <apex:pageMessages />
     <div style="margin-left: 16px; margin-right: 16px; margin-top:20px;">
         <h1 style="font-size: 1.5rem;">Most Read</h1>
         <div style="margin-top:10px;">
             <apex:variable value="{!0}" var="index" />
             <apex:pageBlock >
-                <apex:pageBlockTable value="{!newsList.articles}" var="article">
+                <apex:pageBlockTable value="{!newsList.articles}" var="article" cellspacing="10px" columnClasses="indexColumnClass,linkColumnClass">
                     <apex:column >
-                        <apex:outputText style="font-color:red;">
+                        <apex:outputText>
                             <apex:variable value="{!index + 1}" var="index" />
                             {!index}
                         </apex:outputText>
