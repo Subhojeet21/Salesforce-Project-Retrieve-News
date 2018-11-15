@@ -1,0 +1,22 @@
+<apex:page controller="bbc" showHeader="false" sidebar="false" action="{!getMostReadNews}">
+    <apex:pageMessages />
+    <div style="margin-left: 16px; margin-right: 16px; margin-top:20px;">
+        <h1 style="font-size: 1.5rem;">Most Read</h1>
+        <div style="margin-top:10px;">
+            <apex:variable value="{!0}" var="index" />
+            <apex:pageBlock >
+                <apex:pageBlockTable value="{!newsList.articles}" var="article">
+                    <apex:column >
+                        <apex:outputText style="font-color:red;">
+                            <apex:variable value="{!index + 1}" var="index" />
+                            {!index}
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column >
+                        <apex:outputLink value="{!article.url}" id="theLink">{!article.title}</apex:outputLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </div>
+    </div>
+</apex:page>
