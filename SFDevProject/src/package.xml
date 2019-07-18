@@ -15,5 +15,9 @@
         <members>bbc</members>
         <name>RemoteSiteSetting</name>
     </types>
+    <types>
+        <members>Endpoints__c</members>
+        <name>CustomObject</name>
+    </types>
     <version>41.0</version>
 </Package>
